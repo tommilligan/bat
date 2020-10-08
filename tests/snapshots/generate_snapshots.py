@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
 import itertools
-import subprocess
 import pathlib
 import shutil
+import subprocess
 
 
 def generate_snapshots():
@@ -24,9 +24,8 @@ def generate_style_snapshot(style):
 
 def generate_snapshot(name, arguments):
     command = "cargo run -- --paging=never --color=never --decorations=always "
-    command += "{args} sample.rs > output/{name}.snapshot.txt".format(
-        name=name,
-        args=arguments
+    command += "{args} sample.rs sample.md > output/{name}.snapshot.txt".format(
+        name=name, args=arguments
     )
     print("generating snapshot for {}".format(name))
     subprocess.call(command, shell=True)

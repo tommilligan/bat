@@ -20,3 +20,6 @@ _ fn main() {
 + fn perimeter(rectangle: &Rectangle) -> u32 {
 +     (rectangle.width + rectangle.height) * 2
 + }
+  # sample
+  
+  This sample `rust` code computes the area of a **rectangle**.
